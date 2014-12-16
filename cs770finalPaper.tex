@@ -1,22 +1,5 @@
 \documentclass{sigchi}
 
-% Use this command to override the default ACM copyright statement (e.g. for preprints). 
-% Consult the conference website for the camera-ready copyright statement.
-
-
-%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
-% \toappear{Permission to make digital or hard copies of all or part of this work for personal or classroom use is 	granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
-% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
-% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
-% DOI string from ACM form confirmation}
-%% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
-
-
-% Arabic page numbers for submission. 
-% Remove this line to eliminate page numbers for the camera ready copy
-% \pagenumbering{arabic}
-
-
 % Load basic packages
 \usepackage{balance}  % to better equalize the last page
 \usepackage{graphics} % for EPS, load graphicx instead
@@ -180,13 +163,13 @@ We conducted a manipulation check to verify the success of manipulation in our c
   \centering
   \begin{tabular}{|c|c|c|c|}
     \hline
-    Type & Non-Severe & Severe & p Value \\
+    Type & Non-Severe(Mean) & Severe(Mean) & p Value \\
     \hline
-    Financial & 3.633 & 4.918 & 0.0003 \\
+    Financial & 3.633 & 4.918 & $ < 0.001$ \\
     \hline
-    Psychological & 2.633 & 5.020 & $ < 0.0001$ \\
+    Psychological & 2.633 & 5.020 & $ < 0.001$ \\
     \hline
-    Psychological & 2.816 & 5.020 & $ < 0.0001$ \\
+    Physical & 2.816 & 5.020 & $ < 0.001$ \\
     \hline
   \end{tabular}
   \caption{Mean difference between perceive severity}
@@ -196,11 +179,11 @@ We conducted a manipulation check to verify the success of manipulation in our c
 \subsection{Result}
 To test our hypotheses, we carried analysis of variance (ANOVA) on the collected result. 
 
-In our first hypothesis, we claimed that robots will be blamed significantly more than other stakeholders in the psychological harm condition. To verify the hypothesis, we ran a one-way ANOVA on the result and found no evidence to support our hypothesis. We found that the participants blamed programmer most (mean = 6.28), comparing to other stakeholders. In relation to our hypothesis, participants blamed programmer ($ F(1,582) =139.1, p < .0001$), owner ($ F(1,582) = 19.68, p < .0001$), manufacturer ($F(1,582) = 38.28, p < .0001$) and manager ($F(1,582) = 13.38, p = 0.0003$) more than the robot. Customer was the only stakeholder which has been blamed significantly less than the robot ($F(1,582) = 54.09, p < .0001$).
+In our first hypothesis, we claimed that robots will be blamed significantly more than other stakeholders in the psychological harm condition. To verify the hypothesis, we ran a one-way ANOVA on the result and found no evidence to support our hypothesis. We found that the participants blamed programmer most (mean = 6.28), comparing to other stakeholders. In relation to our hypothesis, participants blamed programmer ($ F(1,582) =139.1, p < .01$), owner ($ F(1,582) = 19.68, p < .001$), manufacturer ($F(1,582) = 38.28, p < .001$) and manager ($F(1,582) = 13.38, p < 0.001$) more than the robot. Customer was the only stakeholder which has been blamed significantly less than the robot ($F(1,582) = 54.09, p < .001$).
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.8\columnwidth]{psychologicalGraph}
+\includegraphics[width=1.0\columnwidth]{psychologicalGraph}
 \caption{Difference of assigned blame for Psychological Harm}
 \label{fig:figure5}
 \end{figure}
@@ -211,37 +194,87 @@ In our first hypothesis, we claimed that robots will be blamed significantly mor
     \hline
     Stakeholders & Mean & Standard Deviation\\
     \hline
-    Robot & 3.184 & 0\\
+    Robot & 3.184 & 2.267\\
     \hline
-    Customer & 1.255 & 0\\
+    Customer & 1.255 & 0.722\\
     \hline
-    Manager & 4.142 & 0 \\
+    Manager & 4.142 & 2.075 \\
     \hline
-    Manufacturer & 4.806 & 0 \\
+    Manufacturer & 4.806 & 2.014 \\
     \hline
-    Owner & 4.34694 & 0 \\
+    Owner & 4.34694 & 2.243 \\
     \hline
-    Programmer & 6.286 & 0 \\
+    Programmer & 6.286 & 1.075 \\
     \hline
   \end{tabular}
   \caption{Mean Difference between perceive severity}
   \label{tab:table2}
 \end{table}
 
-Our second hypothesis states that participants would blame robots for less severe mistakes in financial and physical harm but will blame other stakeholders for severe mistake. We ran a two-way ANOVA on our result and found no result that supports our hypothesis.
+Our second hypothesis states that participants would blame robots for less severe mistakes in financial and physical harm but will blame other stakeholders for severe mistake. We ran a two-way ANOVA on our result and found no result that supports our hypothesis. We found that the severity of the condition has no statistical effect on participants' distribution of blame. However, we found type of condition did influence the users distribution of blame for stakeholders. 
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Stakeholders & F ratio & p value\\
+    \hline
+    Robot & 2.533 & 0.113\\
+    \hline
+    Manufacturer & 1.008 & 0.366\\
+    \hline
+    Programmer & 0.156 & 0.693 \\
+    \hline
+    Manager & 2.4931 & 0.115 \\
+    \hline
+    Owner & 2.5407 & 0.112 \\
+    \hline
+    Customer & 0.0123 & 0.9119 \\
+    \hline
+  \end{tabular}
+  \caption{Effects of Severity of Participants' distribution of blame}
+  \label{tab:table2}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Stakeholders & F ratio & p value\\
+    \hline
+    Robot & 1.008 & 0.366\\
+    \hline
+    Manufacturer & 2.5257 & 0.0818\\
+    \hline
+    Programmer & 7.5548 & 0.0006 \\
+    \hline
+    Manager & 0.2987 & 0.7420 \\
+    \hline
+    Owner & 0.226 & 0.798 \\
+    \hline
+    Customer & 7.131 & 0.0009 \\
+    \hline
+  \end{tabular}
+  \caption{Effects of Types of Mistakes on Participants' distribution of blame}
+  \label{tab:table2}
+\end{table}
 
 
-We found the severity of the condition significantly influence participants blame on the robot($F(1,240), p = 0.0159$). However the difference between conditions was only 0.22. The type of the condition also affected the blame on robot($F(2,240)=9.280, p = 0.0001$). Participants blame the robot less in psychological condition compare to Physical($F(1,240)=18.27, p < .0001$) and financial($F(1,240)=6.77, p = 0.0098$). No interaction effect was found between severity and type of mistake.
+When evaluating the responsibility for the programmer, we found that the type of the mistake statistically influence the participant's distribution of blame($F(1,288)=7.5548, p = 0.0006$). We conducted a pairwise evaluation and found that participants blame the programmer less in physical condition, $M=5.63, SD=1.63$ than financial, $M=6.45, SD=0.82, F(1,288)=13.16, p < 0.001$) and psychological, $M=6.28, SD=1.19, F(1,288)=9.139, p = 0.0027$.
 
-We also found that severity of the condition has a significant effect on the rate of blame for manufacturers($F(1,240)=7.4947, p = 0.0067$). We see a small increase of 0.35 from non-severe to severe. The blaming of manufacturers are also influence by the type of condition($F(2,240)=7.4736, p=0.0007$). In doing pairwise analysis, we found that manufacturers are blamed less for financial($F(1,240)=5.828, p = 0.0165$) and physical($F(1,240)=14.610, p = 0.0002$).
+We also found type of mistake has marginally effects on assignment of blame towards manufacturer($F(1,288)=2.5257, p = 0.0818$). We conducted a pairwise analysis and found that participants blame manufacturer less for psychological mistakes, $M=5.00, SD=1.97$ compare to physical mistakes, $M=5.46, SD=1.63, F(1,288)=4.938, p=0.0271$.
 
-When asked about the responsibility of the programmers in these mistakes, the type of mistake influence the distribution of blame($F(2,240)=12.577, p < .0001$). Participants blame the programmers more for both the financial condition($F(1,240)=15.214, p < 0.0001$) and psychological condition($F(1,240)=21.91, p < 0.0001$).
+Besides the programmers, we also found that type of mistake also influence participants blaming of customers($F(2,288)=7.131, p < 0.001$). Our analysis shows that customers were blamed more for the physical condition,$M=1.85, SD=1.27$ compare to financial mistakes,$M=1.469, SD=1.00, F(1,288)=5.6358, p = 0.0183$) and psychological mistakes, $M=1.45, SD=1.02, F(1,288)=13.9169, p < 0.001$).
 
-We also saw a small significant effect of type of mistake in blaming the manager for the mistake of the robot($P(1,240)=11.31, p = 0.0009$). Participants were shown to increase the blame of the manager when the mistake was more severe. We also saw an interaction effect between Severity and Type for the manager($F(2,240)=3.7958, p = 0.0238$)
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1.0\columnwidth]{typeGraph}
+\caption{Effects of Type of Mistakes on Distribution of Blame for each stakeholders}
+\label{fig:figure5}
+\end{figure}
 
-For owners, we saw there was a significant effect of the severity of the condition on the blaming of owners($F(1,240)=12.02, p=0.0006$). We also saw interaction effect between severity and type of condition on the blaming of owner.
+Besides the findings described above, we did not found any main or interactive effect of the type and severity of the mistake for the assignment of responsibility towards different stakeholders.
 
-We did not found any effects of severity and interaction effect for the blaming of customer. However, we observe that the type of mistake significantly effect the assignment of blame($F(2,240)=9.19, p=0.0001$).In pair wise analysis, we found participants blame the robot more in the physical condition compare to the financial($F(1,240)=7.2609, p = 0.0075$) and psychological condition($F(1,240)=17.9301, p < .0001$)
 
 \section{Discussion}
 Returning to our hypotheses, we were looking for our results to show that the participants would blame the robot more in situations involving psychological harm, and for the results to show more blame for other stakeholders in more severe situations. However, our results did not contribute to our hypotheses in any way. Based on the analysis of our data, there is no significant difference in how much the participants blame the robot for psychological harm versus other types of harm. In addition to that, severity appears to have no effect on the distribution of blame whatsoever.
