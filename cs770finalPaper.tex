@@ -6,6 +6,18 @@
 \usepackage{times}    % comment if you want LaTeX's default font
 \usepackage{url}      % llt: nicely formatted URLs
 
+\usepackage{gensymb}
+\usepackage{stfloats}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage{quoting}
+
+
+\usepackage[italic,defaultmathsizes,noasterisk]{mathastext}
+\usepackage{cuted}
+
+
+
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
 % llt: Define a global style for URLs, rather that the default one
@@ -50,7 +62,7 @@ breaklinks=true,
 % End of preamble. Here it comes the document.
 \begin{document}
 
-\title{Who to Blame?\\ Understanding Distribution of Responsibility in Human-Robot Interaction}
+\title{Who to Blame?:\\ Understanding Distribution of Responsibility in Human-Robot Interaction}
 
 \numberofauthors{3}
 \author{
@@ -107,7 +119,7 @@ Each participant was introduced to a robot restaurant waiter through a video. Af
 \item Severe: robot assumed the customer would not be able to afford an item based on appearance.
 \end{itemize}
 
-\begin{figure}[!h]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\columnwidth]{Psych-Severe}
 \caption{Psychological Harm - More Severe}
@@ -153,7 +165,7 @@ In each condition, participants were asked to identify the possible parties resp
 To validate the successful manipulation of the independent variables, participants were also asked to rank the severity of each mistake on a 1-7 likert scale, where 1 is least severe and 7 as most severe. As the study was conducted through a web portal, we asked a validation question ("How much money was given to the robot in the previous video?") to ensure participants were following the procedure of the study.
 
 \subsection{Participants}
-50 participants (24 male and 26 female) with a age ranging from (18-69) with a age mean of 34.5 were recruited through the Amazon mTruck Infrastructure and social media platform. One male participant's responses were removed from the data due to a failure to correctly respond to one of our data response validity questions. All participants were limited to residents of United States. Our participants reported they were familiar with computers, $M=5.77, SD=1.09$ and were somewhat familiar with robotic technologies, $M=3.26, SD=1.48$.
+50 participants (24 male and 26 female) with a age range of 18-69 with a age mean of 34.5 were recruited through the Amazon mTruck Infrastructure and social media platform. One male participant's responses were removed from the data due to a failure to correctly respond to one of our data response validity questions. All participants were limited to residents of United States. Our participants reported they were familiar with computers, $M=5.77, SD=1.09$ and were somewhat familiar with robotic technologies, $M=3.26, SD=1.48$.
 \section{Findings}
 \subsection{Manipulation Check}
 We conducted a manipulation check to verify the success of manipulation in our condition. After watching each video clip, we asked participants to rate the severity for each scenario. We found in all scenarios, that the participants rated the severe condition significantly higher than the non-severe condition.
@@ -206,6 +218,23 @@ In our first hypothesis, we claimed that robots will be blamed significantly mor
 
 Our second hypothesis states that participants would blame robots for less severe mistakes in financial and physical harm but will blame other stakeholders for severe mistake. We ran a two-way ANOVA on our result and found no result that supports our hypothesis. We found that the severity of the condition has no statistical effect on participants' distribution of blame. However, we found type of condition did influence the users distribution of blame for stakeholders. 
 
+
+%\begin{figure*}[Ht!]
+%\centering
+%%\includegraphics[width=2.0\columnwidth]{typeGraph}
+%\caption{Effects of Type of Mistakes on Distribution of Blame for each stakeholders}
+%\label{fig:figure6}
+%\end{figure*}
+
+\begin{figure*}[!tp]
+\centering
+\includegraphics[width=7.1in]{typeGraph}
+\caption{Effects of Type of Mistakes on Distribution of Blame for each stakeholders}
+\label{fig:figure5}
+\vspace{-6pt}
+\end{figure*}
+
+
 \hspace{1 mm} \\
 \begin{table}[h]
   \centering
@@ -249,15 +278,7 @@ We also found type of mistake has marginally effects on assignment of blame towa
 
 Besides the programmers, we also found that type of mistake also influence participants blaming of customers($F(2,288)=7.131, p < 0.001$). Our analysis shows that customers were blamed more for the physical condition,$M=1.85, SD=1.27$ compare to financial mistakes,$M=1.469, SD=1.00, F(1,288)=5.6358, p = 0.0183$) and psychological mistakes, $M=1.45, SD=1.02, F(1,288)=13.9169, p < 0.001$).
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=1.0\columnwidth]{typeGraph}
-\caption{Effects of Type of Mistakes on Distribution of Blame for each stakeholders}
-\label{fig:figure5}
-\end{figure}
-
 Besides the findings described above, we did not found any main or interactive effect of the type and severity of the mistake for the assignment of responsibility towards different stakeholders.
-
 
 \section{Discussion}
 Returning to our hypotheses, we were looking for our results to show that the participants would blame the robot more in situations involving psychological harm, and for the results to show more blame for other stakeholders in more severe situations. However, our results did not contribute to our hypotheses in any way. Based on the analysis of our data, there is no significant difference in how much the participants blame the robot for psychological harm versus other types of harm. In addition to that, severity appears to have no effect on the distribution of blame whatsoever.
